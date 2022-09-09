@@ -1,4 +1,5 @@
 const fs = require( 'fs');
+const path = require('path');
 const generateJWT = require('../helpers/generateJWT');
 
 const login = async (req, res) => { 
@@ -6,9 +7,9 @@ const login = async (req, res) => {
    let password = req.body.password
 
    try {
-      const dbUsers = fs.readFileSync("/Users/marioalejandroduran/Desktop/BootCamp/ejercio JWT/db/users.json", 'utf-8');
+      const dbUsers = fs.readFileSync(path.join(__dirname, "/../db/users.json") ,'utf-8');
       const users = JSON.parse(dbUsers);
-
+     
       const user = users.find(user => user.email == email && user.password == password);
       
       if (!user) {

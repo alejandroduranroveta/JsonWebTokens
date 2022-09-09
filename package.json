@@ -1,7 +1,6 @@
 {
   "name": "ejercio-jwt",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +11,16 @@
   "dependencies": {
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
-    "jsonwebtoken": "^8.5.1"
-  }
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandroduranroveta/JsonWebTokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alejandroduranroveta/JsonWebTokens/issues"
+  },
+  "homepage": "https://github.com/alejandroduranroveta/JsonWebTokens#readme",
+  "description": ""
 }

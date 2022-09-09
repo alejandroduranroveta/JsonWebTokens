@@ -1,9 +1,12 @@
 const fs = require('fs')
+const path = require('path');
 
 const listProducts = (req, res) => {
    
    try{
-      const dbProducts = fs.readFileSync('/Users/marioalejandroduran/Desktop/BootCamp/ejercio JWT/db/products.json','utf-8');
+      
+
+      const dbProducts = fs.readFileSync(path.join(__dirname, "/../db/products.json"),'utf-8');
       const productos = JSON.parse(dbProducts);
      
       res.status(200).json({
